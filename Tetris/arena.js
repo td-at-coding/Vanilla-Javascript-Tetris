@@ -1,3 +1,6 @@
+/*
+  loop over elements within the grid with a callback
+*/
 export function setCoords(arena, callback){
   return arena.map((row, i) =>
    row.map((col, j) =>{
@@ -7,7 +10,6 @@ export function setCoords(arena, callback){
   )
 }
 export function combine(tetris, coords){
-  // debugger;
   let combined = tetris.map((row, i)=> row.map((col, j)=> [i+coords[0], j+coords[1]]));
   //console.log(combined);
   return function coordscompare(row, col, value){
